@@ -5,7 +5,8 @@ class xrootd::config (
 
   $configdir = $xrootd::params::configdir,
   $logdir = $xrootd::params::logdir,
-
+  $all_sitename = $xrootd::params::all_sitename,
+  
 ) inherits xrootd::params {
 
   include fetchcrl
