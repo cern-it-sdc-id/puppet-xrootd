@@ -15,6 +15,11 @@ set <%= key %>=<%= val %>
 
 <% if @params -%>
   <%- @params.sort.each do |key,val| -%>
+    <%- if val.respond_to? :each -%>
+      <%- val.each do |v| -%>
+<%= key %>=<%= v %>
+    <%- else -%>
 <%= key %>=<%= val %>
+    <%- end -%>
   <%- end -%>
 <% end -%>
