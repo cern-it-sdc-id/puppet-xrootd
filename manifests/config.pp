@@ -24,10 +24,16 @@ class xrootd::config (
   
   File {
     owner  => $xrootd_user,
-    group  => $xrootd_group
+    group  => $xrootd_group,
   }
 
-  file { [$configdir, $logdir, $spooldir, $all_pidpath]:
+  file { [$configdir, $logdir, $all_pidpath]:
+    ensure => directory,
+  }
+  
+  file { $spooldir:
+    owner  => 'daemon',
+    group  => 'daemon',
     ensure => directory,
   }
 
