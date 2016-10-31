@@ -5,14 +5,14 @@
   <%- @setenv.sort.each do |key,val| -%>
 setenv <%= key %>=<%= val %>
   <%- end -%>
-<% end -%>
 
+<% end -%>
 <% if @set -%>
   <%- @set.sort.each do |key,val| -%>
 set <%= key %>=<%= val %>
   <%- end -%>
-<% end -%>
 
+<% end -%>
 <% if @params -%>
   <%- @params.sort.each do |key,val| -%>
     <%- if val.respond_to? :each -%>
