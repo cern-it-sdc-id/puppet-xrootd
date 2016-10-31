@@ -18,6 +18,7 @@ set <%= key %>=<%= val %>
     <%- if val.respond_to? :each -%>
       <%- val.each do |v| -%>
 <%= key %>=<%= v %>
+      <%- end -%>
     <%- else -%>
 <%= key %>=<%= val %>
     <%- end -%>
