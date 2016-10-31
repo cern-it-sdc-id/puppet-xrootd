@@ -1,28 +1,19 @@
 define xrootd::create_sysconfig (
-  $filename = $title,
-  $template = $xrootd::config::sysconfigfile_template,
+  $xrootd_instances_options = $xrootd::params::xrootd_instances_options,
+  $cmsd_instances_options = $xrootd::params::cmsd_instances_options,
+  $purd_instances_options = $xrootd::params::purd_instances_options,
+  $xfrd_instances_options = $xrootd::params::xfrd_instances_options,
 
-  $xrootd_user = $xrootd::config::xrootd_user,
-  $xrootd_group = $xrootd::config::xrootd_group,
+  $exports = $xrootd::params::exports,
 
-  $xrootd_instances_options = $xrootd::config::xrootd_instances_options,
-  $cmsd_instances_options = $xrootd::config::cmsd_instances_options,
-  $purd_instances_options = $xrootd::config::purd_instances_options,
-  $xfrd_instances_options = $xrootd::config::xfrd_instances_options,
-
-  $exports = $xrootd::config::exports,
-
-  $daemon_corefile_limit = $xrootd::config::daemon_corefile_limit,
+  $daemon_corefile_limit = $xrootd::params::daemon_corefile_limit,
   $enable_hdfs = false,
   $java_home = undef,
 ) {
-  include xrootd::config
+  require xrootd::config
 
-  file {$filename:
-    ensure  => file,
-    owner   => $xrootd_user,
-    group   => $xrootd_group,
-    content => template($template)
+  file {$title:
+    content => template($xrootd::params::sysconfigfile_template)
   }
 
 }

@@ -1,15 +1,6 @@
 # == Class: xrootd
 #
-# Full description of class xrootd here.
-#
-# === Parameters
-#
-#
-# === Variables
-#
-#
-# === Examples
-#
+# Refer to the README for detailed documentation.
 #
 # === Authors
 #
@@ -20,12 +11,15 @@
 # Copyright 2012 CERN, unless otherwise noted.
 #
 class xrootd (
-) inherits xrootd::params {
+  $xrootd_instances = undef,
+  $cmsd_instances = undef,
+) {
   
-  Class[xrootd::install] -> Class[xrootd::config] -> Class[xrootd::service]
-
-  class{"xrootd::install":}
-  class{"xrootd::config":}
-  class{"xrootd::service":}
+  class{"xrootd::install": } ->
+    class{"xrootd::config": } ->
+      class{"xrootd::service":
+        xrootd_instances => $xrootd_instances,
+        cmsd_instances => $cmsd_instances,
+      }
 
 }
