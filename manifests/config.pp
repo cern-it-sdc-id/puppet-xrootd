@@ -17,11 +17,6 @@ class xrootd::config (
     unless  => "ls ${grid_security}/certificates/*.r0"
   }
   
-  exec {'systemctl-daemon-reload':
-    command     => '/usr/bin/systemctl daemon-reload',
-    refreshonly => true,
-  }
-  
   group { $xrootd_group: } ->
   user { $xrootd_user: 
     gid => $xrootd_group,
