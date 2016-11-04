@@ -27,14 +27,8 @@ class xrootd::config (
     group  => $xrootd_group,
   }
 
-  file { [$configdir, $logdir, $all_pidpath]:
+  file { [$configdir, $logdir, $spooldir, $all_pidpath]:
     ensure => directory,
   }
   
-  file { $spooldir:
-    owner  => 'daemon',
-    group  => 'daemon',
-    ensure => directory,
-  }
-
 }

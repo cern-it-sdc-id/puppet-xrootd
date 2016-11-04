@@ -16,7 +16,7 @@ class xrootd::service (
 
   if $::osfamily == 'RedHat' and ($::operatingsystemmajrelease + 0) >= 7 { 
     if $xrootd_instances == undef {
-      fail("xrootd_instances parameter  should  not be empty")
+      fail("xrootd_instances parameter should not be empty")
     }
     else {
       service {$xrootd_instances:
