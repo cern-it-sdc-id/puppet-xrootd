@@ -3,15 +3,16 @@ User= <%= @xrootd_user %>
 Group= <%= @xrootd_group %>
 
 <% if @exports -%>
-<% @exports.sort.map do |key,val| -%>
+  <%- @exports.sort.each do |key,val| -%>
 <%= key %>=<%= val %>
-<% end -%>
-<% end -%>
+  <%- end -%>
 
+<% end -%>
 <% if @daemon_corefile_limit -%>
 DAEMON_COREFILE_LIMIT=<%= @daemon_corefile_limit %>
-<% end -%>
 
+<% end -%>
 <% if @enable_hdfs -%>
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<%= @java_home %>/jre/lib/amd64/server/
+
 <% end -%>
