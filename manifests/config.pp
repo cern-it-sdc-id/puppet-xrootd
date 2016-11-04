@@ -22,6 +22,11 @@ class xrootd::config (
     refreshonly => true,
   }
   
+  group { $xrootd_group: } ->
+  user { $xrootd_user: 
+    gid => $xrootd_group,
+  }
+  
   File {
     owner  => $xrootd_user,
     group  => $xrootd_group,
