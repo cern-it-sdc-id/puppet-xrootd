@@ -1,9 +1,6 @@
 class xrootd::service (
   $xrootd_instances,
   $cmsd_instances,
-  $sysconfigfile = $xrootd::params::sysconfigfile,
-  $configfile = $xrootd::params::configfile,
-  $authfile = $xrootd::params::authfile,
   $certificate = $xrootd::params::certificate,
   $key	= $xrootd::params::key,
 ) inherits xrootd::params {
