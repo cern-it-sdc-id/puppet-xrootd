@@ -13,7 +13,6 @@ class xrootd::params {
   $authfile_template = "xrootd/authfile_generic.erb"
   $digauthfile = "${configdir}/digauth.cfg"
   $digauthfile_template = "xrootd/digauthfile.erb"
-  $all_adminpath = "/var/spool/xrootd"
   $all_pidpath = "/var/run/xrootd"
   
   # Unlike the other *_instances_options, this is an array of hashes.
