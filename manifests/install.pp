@@ -1,9 +1,4 @@
-class xrootd::install (
-) inherits xrootd::params {
-
-  Class[xrootd::install] -> Class[xrootd::config]
-
-    package {"xrootd":
-      ensure => present
-    }
+class xrootd::install () {
+  # Rely on the environment to find this package on its own.
+  package {"xrootd": }
 }
