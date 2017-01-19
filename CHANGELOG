@@ -1,17 +1,19 @@
-2017-08-23 Andrea Manzi  <andrea.manzi@cern.ch>
-        * update fetchcrl dependency
-2017-07-07 Andrea Manzi  <andrea.manzi@cern.ch>
-        * change how certs are managed to restart Xrootd services if they change
+2016-10-31 Xavier Mol <xavier.mol@kit.edu>
+  * Make the module agnostic towards the numerous xrootd parameters.
+2016-08-23 Andrea Manzi  <andrea.manzi@cern.ch>
+  * update fetchcrl dependency
+2016-07-07 Andrea Manzi  <andrea.manzi@cern.ch>
+  * change how certs are managed to restart Xrootd services if they change
 2016-05-31 Frederic Schaer  <frederic.schaer@cea.fr>
-        * completed support for CentOS7
-        * xrootd service restarted if certificate updated
+  * completed support for CentOS7
+  * xrootd service restarted if certificate updated
 2016-01-18 Frederic Schaer  <frederic.schaer@cea.fr>
-    	* Puppet 4 support
+  * Puppet 4 support
 2015-12-10 Andrea Manzi <andrea.manzi@cern.ch>
-        * added oss.statlib var
-        * added cms.cidtag var
+  * added oss.statlib var
+  * added cms.cidtag var
 2015-09-15  Gerard Bernabeu <gerard1@fnal.gov>
-        * Added some more config variables
+  * Added some more config variables
 	* instances_options now have -k fifo like default xrootd RPM
 	* xrootd_instances_options array fixed and idented template content
 	* all.manager converted in an array
