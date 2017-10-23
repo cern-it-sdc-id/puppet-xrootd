@@ -1,7 +1,7 @@
 [Service]
 User= <%= @xrootd_user %>
 Group= <%= @xrootd_group %>
-
+RuntimeDirectory=xrootd
 <% if @exports -%>
 <% @exports.sort.map do |key,val| -%>
 Environment=<%= key %>=<%= val %>
