@@ -7,6 +7,8 @@ class xrootd::config (
   $logdir = $xrootd::params::logdir,
   $spooldir = $xrootd::params::spooldir,
   $all_pidpath = $xrootd::params::all_pidpath,
+  $runtime_dir = $xrootd::params::runtime_dir,
+  $after_conf = $xrootd::params::after_conf
 
 ) inherits xrootd::params {
 
