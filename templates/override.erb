@@ -1,8 +1,10 @@
+[Unit]
+After=<%= @after_conf %>
+
 [Service]
 User=<%= @xrootd_user %>
 Group=<%= @xrootd_group %>
 RuntimeDirectory=<%= @runtime_dir %>
-After=<%= @after_conf %>
 
 <% if @exports -%>
 <% @exports.sort.map do |key,val| -%>
