@@ -74,4 +74,6 @@ class xrootd::params {
     $oss_localroot = undef
     $certificate = '/etc/grid-security/hostcert.pem'
     $key = '/etc/grid-security/hostkey.pem'
+    $runtime_dir = 'xrootd'
+    $after_conf = 'network-online.target'
 }

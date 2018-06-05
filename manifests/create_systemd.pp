@@ -3,7 +3,9 @@ define xrootd::create_systemd (
   $xrootd_user = $xrootd::config::xrootd_user,
   $xrootd_group = $xrootd::config::xrootd_group,
   $exports = $xrootd::config::exports,
-  $daemon_corefile_limit = $xrootd::config::daemon_corefile_limit
+  $daemon_corefile_limit = $xrootd::config::daemon_corefile_limit,
+  $runtime_dir = $xrootd::config::runtime_dir,
+  $after_conf = $xrootd::config::after_conf
 ) {
   include xrootd::config
 
