@@ -14,10 +14,10 @@
   "license": "Apache License, Version 2.0",
   "name": "lcgdm-xrootd",
   "operatingsystem_support": [],
-  "project_page": "https://svnweb.cern.ch/trac/lcgdm",
+  "project_page": "http://lcgdm.web.cern.ch/dpm",
   "requirements": [],
   "source": "https://github.com/cern-it-sdc-id/puppet-xrootd",
   "summary": "This module installs and configure a xrootd server",
   "tags": [],
-  "version": "0.2.6"
+  "version": "0.2.7"
 }
