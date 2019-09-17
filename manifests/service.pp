@@ -18,7 +18,7 @@ class xrootd::service (
 
   $certificates_files = File[$certificate,$key]
 
- if $::operatingsystemmajrelease and ($::operatingsystemmajrelease + 0) >= 7 { 
+ if versioncmp($facts['os']['release']['major'], '7') >= 0 {
 
    if $xrootd_instances == undef {
 	fail("xrootd_instances parameter  should  not be empty")

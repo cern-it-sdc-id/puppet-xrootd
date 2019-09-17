@@ -1,3 +1,5 @@
+2019-09-16 Petr Vokac  <petr.vokac@cern.ch>
+        * fix deprecation warnings
 2018-06-04 Andrea Manzi  <andrea.manzi@cern.ch>
         * more fixes for C7
 2018-01-18 Andrea Manzi  <andrea.manzi@cern.ch>

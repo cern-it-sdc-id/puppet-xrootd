@@ -9,7 +9,7 @@ This is the puppet-xrootd module, it configures the Xrootd server and it's a dep
 ASL 2.0
 
 ### Contact
-Andrea Manzi <andrea.manzi@cern.ch>
+DPM devel <dpm-devel-cern@cern.ch>
 
 ## Support
-Tickets and issues at our [cern-it-sdc-id site](https://github.com/cern-it-sdc-id)
+Tickets and issues at our [Jira](https://its.cern.ch/jira/projects/LCGDM/)
